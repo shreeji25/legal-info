@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Legal Information Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-scale-balanced"></i>
+                <span>LegalInfo</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Categories</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Indian Legal Information Portal</h1>
+            <p>Search for legal information and constitutional articles</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Enter your legal query (e.g., traffic rules, property rights, criminal law)...">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="featured-categories">
+            <h2>Popular Legal Categories</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Traffic Laws</h3>
+                    <p>Rules, regulations, and penalties</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Property Rights</h3>
+                    <p>Land, property, and real estate laws</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Criminal Law</h3>
+                    <p>Crimes, punishments, and procedures</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Civil Rights</h3>
+                    <p>Fundamental rights and freedoms</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Business Law</h3>
+                    <p>Corporate and commercial laws</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Family Law</h3>
+                    <p>Marriage, divorce, and custody</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-searches">
+            <h2>Popular Searches</h2>
+            <div class="search-tags">
+                <span class="search-tag">Traffic Rules</span>
+                <span class="search-tag">Property Rights</span>
+                <span class="search-tag">Criminal Law</span>
+                <span class="search-tag">Civil Rights</span>
+                <span class="search-tag">Business Law</span>
+                <span class="search-tag">Family Law</span>
+            </div>
+        </section>
+
+        <section class="results" id="resultsSection">
+            <!-- Results will be dynamically populated here -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Providing accurate legal information based on the Indian Constitution</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@legalinfo.com</p>
+                <p>Phone: +91 1234567890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LegalInfo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
