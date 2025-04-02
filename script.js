@@ -276,7 +276,9 @@ const debouncedSearch = debounce((query) => {
 
 searchButton.addEventListener('click', () => {
     const query = searchInput.value.trim();
-    debouncedSearch(query);
+    if (query) {
+        window.location.href = `results.html?q=${encodeURIComponent(query)}`;
+    }
 });
 
 searchInput.addEventListener('input', () => {
@@ -287,24 +289,25 @@ searchInput.addEventListener('input', () => {
 searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         const query = searchInput.value.trim();
-        debouncedSearch(query);
+        if (query) {
+            window.location.href = `results.html?q=${encodeURIComponent(query)}`;
+        }
     }
 });
 
 // Optimized category card click handlers
 categoryCards.forEach(card => {
     card.addEventListener('click', () => {
-        const category = card.querySelector('h3').textContent;
-        searchInput.value = category;
-        debouncedSearch(category);
+        const category = card.querySelector('h3').textContent.trim();
+        window.location.href = `results.html?q=${encodeURIComponent(category)}`;
     });
 });
 
 // Optimized search tag click handlers
 searchTags.forEach(tag => {
     tag.addEventListener('click', () => {
-        searchInput.value = tag.textContent;
-        debouncedSearch(tag.textContent);
+        const query = this.textContent.trim();
+        window.location.href = `results.html?q=${encodeURIComponent(query)}`;
     });
 });
 
@@ -442,4 +445,45 @@ function printResult(title) {
         printWindow.document.close();
         printWindow.print();
     }
-} 
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const searchTags = document.querySelectorAll('.search-tag');
+
+    // Handle search button click
+    searchButton.addEventListener('click', function() {
+        const query = searchInput.value.trim();
+        if (query) {
+            window.location.href = `results.html?q=${encodeURIComponent(query)}`;
+        }
+    });
+
+    // Handle Enter key press
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            const query = searchInput.value.trim();
+            if (query) {
+                window.location.href = `results.html?q=${encodeURIComponent(query)}`;
+            }
+        }
+    });
+
+    // Handle search tag clicks
+    searchTags.forEach(tag => {
+        tag.addEventListener('click', function() {
+            const query = this.textContent.trim();
+            window.location.href = `results.html?q=${encodeURIComponent(query)}`;
+        });
+    });
+
+    // Handle category card clicks
+    const categoryCards = document.querySelectorAll('.category-card');
+    categoryCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const category = this.querySelector('h3').textContent.trim();
+            window.location.href = `results.html?q=${encodeURIComponent(category)}`;
+        });
+    });
+}); 
