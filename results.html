@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Indian Legal Information Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-scale-balanced"></i>
+                <span>LegalInfo</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="category-dropdown">
+                <button class="category-btn">Categories <i class="fas fa-chevron-down"></i></button>
+                <div class="category-menu">
+                    <a href="results.html?category=fundamental_rights">Fundamental Rights</a>
+                    <a href="results.html?category=directive_principles">Directive Principles</a>
+                    <a href="results.html?category=constitutional_bodies">Constitutional Bodies</a>
+                    <a href="results.html?category=criminal">Criminal Law</a>
+                    <a href="results.html?category=civil">Civil Law</a>
+                    <a href="results.html?category=property">Property Rights</a>
+                    <a href="results.html?category=family">Family Law</a>
+                    <a href="results.html?category=business">Business Law</a>
+                    <a href="results.html?category=womens_rights">Women's Rights</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Enter your legal query...">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="results" id="resultsSection">
+            <!-- Results will be dynamically populated here -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Providing accurate legal information based on the Indian Constitution</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@legalinfo.com</p>
+                <p>Phone: +91 1234567890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LegalInfo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="results.js"></script>
+</body>
+</html> 
