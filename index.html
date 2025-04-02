@@ -16,10 +16,23 @@
                 <span>LegalInfo</span>
             </div>
             <div class="nav-links">
-                <a href="#" class="active">Home</a>
-                <a href="#">Categories</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="category-dropdown">
+                <button class="category-btn">Categories <i class="fas fa-chevron-down"></i></button>
+                <div class="category-menu">
+                    <a href="results.html?category=fundamental_rights">Fundamental Rights</a>
+                    <a href="results.html?category=directive_principles">Directive Principles</a>
+                    <a href="results.html?category=constitutional_bodies">Constitutional Bodies</a>
+                    <a href="results.html?category=criminal">Criminal Law</a>
+                    <a href="results.html?category=civil">Civil Law</a>
+                    <a href="results.html?category=property">Property Rights</a>
+                    <a href="results.html?category=family">Family Law</a>
+                    <a href="results.html?category=business">Business Law</a>
+                    <a href="results.html?category=womens_rights">Women's Rights</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -59,10 +72,15 @@
                     <h3>Civil Rights</h3>
                     <p>Fundamental rights and freedoms</p>
                 </div>
-                <div class="category-card">
+                <div class="category-card" onclick="window.location.href='results.html?category=business'">
                     <i class="fas fa-briefcase"></i>
                     <h3>Business Law</h3>
                     <p>Corporate and commercial laws</p>
+                </div>
+                <div class="category-card" onclick="window.location.href='results.html?category=womens_rights'">
+                    <i class="fas fa-female"></i>
+                    <h3>Women's Rights</h3>
+                    <p>Laws protecting women's rights and equality</p>
                 </div>
                 <div class="category-card">
                     <i class="fas fa-users"></i>
